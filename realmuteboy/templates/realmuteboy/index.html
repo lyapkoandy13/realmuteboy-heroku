@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <link href="{% static 'realmuteboy/css/index.css' %}" rel="stylesheet">
+        <title>Realmuteboy</title>
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'realmuteboy/img/favicon.ico' %}">	
+    </head>
+    <body>
+        <div class="video-background">
+            <div class="video-foreground">
+                <div id="player"></div>
+            </div>
+        </div>
+        <div class="foreground-wrapper">
+            <h1>REALMUTEBOY</h1>
+            <span id="muteVideo">
+                <span class="svg-white" id="muteVideo--up">{% include 'realmuteboy/volume_up_48px.svg' %}</span>
+                <span class="svg-white" id="muteVideo--off" style="display:none;">{% include 'realmuteboy/volume_off_48px.svg' %}</span>
+            </span>
+        </div>
+        <script src="{% static 'realmuteboy/js/index.js' %}"></script>
+    </body>
+</html>
